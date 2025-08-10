@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Console Quest - Mini</title>
+  <style>
+    body { margin: 0; font-family: sans-serif; display: flex; height: 100vh; }
+    #editor { width: 50%; height: 100%; border-right: 2px solid #ccc; }
+    #game { flex: 1; display: flex; flex-direction: column; }
+    #level-frame { flex: 1; border: none; background: #f9f9f9; }
+    #controls { padding: 10px; border-top: 2px solid #ccc; }
+    #output { padding: 10px; height: 100px; overflow-y: auto; background: #222; color: #0f0; font-family: monospace; }
+    button { padding: 8px 12px; font-size: 14px; }
+  </style>
+</head>
+<body>
+  <div id="editor"></div>
+  <div id="game">
+    <iframe id="level-frame"></iframe>
+    <div id="controls">
+      <button id="run-btn">Run Code</button>
+    </div>
+    <div id="output"></div>
+  </div>
+
+  <!-- Monaco Editor Loader -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.43.0/min/vs/loader.min.js"></script>
+  <script src="levels.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
